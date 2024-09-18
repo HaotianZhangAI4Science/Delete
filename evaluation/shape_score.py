@@ -49,7 +49,7 @@ def shape_based_result(dock_mols, ori_mol):
 
 def read_sdf(sdf_file):
     try:
-        supp = Chem.SDMolSupplier(sdf_file)
+        supp = Chem.SDMolSupplier(sdf_file,sanitize=False)
         mols_list = [i for i in supp if i is not None]
         if not mols_list:
             logger.warning(f"SDF file {sdf_file} does not contain any molecules")
