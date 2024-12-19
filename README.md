@@ -53,7 +53,7 @@ from torch_geometric.data.data import subgraph
 
 ## Generate novel structures
 
-I have provided an example to suggest new structures using adbr1 example, use this command to generate 3D molecules given the protein and lead fragment! The pretrained checkpoint could be downloaded [here](https://doi.org/10.5281/zenodo.7985201).
+I have provided an example to suggest new structures using adbr1 example, use this command to generate 3D molecules given the protein and lead fragment! The pretrained checkpoint could be downloaded [here](https://doi.org/10.5281/zenodo.7985201). (More pre-trained ckpt can be found in our updated Protocol Section)
 
 ```python
 python -u delete.py --surf_path ./example/adrb1/adrb_pocket_8.0.ply --frag_path ./example/adrb1/2VT4_frag.sdf --check_point ./checkpoint/ckpt/delete.pt --outdir ./outputs --suboutdir adrb1
@@ -80,6 +80,12 @@ Using the above command for generation, about 100 structures are generated, and 
 <img src="./assets/compare.png" width="80%" height="80%" alt="TOC" align=center />
 </div>
 
+
+## Delete Protocol (New Feature)
+
+Here is the [Protocol](https://github.com/HaotianZhangAI4Science/delete-protocol) we utilized to generate a diverse set of molecules. It includes scripts and additional checkpoints. Essentially, the protocol employs the concept of model ensembling to mitigate potential biases during training and to enhance the diversity of the generative models.
+
+ 
 
 
 ## Data
